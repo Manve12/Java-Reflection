@@ -1,8 +1,22 @@
 //API JS CONTROLLER
+var Request = require("request");
 
 module.exports = {
-  getAllData: function(res)
+  login: function(req,res)
   {
-    return res.send("Loaded controller");
+    Request.get("http://localhost:8080/rest/login", function(err,response,body){
+      if (err){
+        return console.dir(err);
+      }
+      console.log(body);
+    });
+  },
+  logout: function(req,res)
+  {
+    return res.send("Loaded logout");
+  },
+  register: function(req,res)
+  {
+    return res.send("Loaded register");
   }
 }
