@@ -11,18 +11,19 @@ public class Billing extends BaseEntity {
     private double value;
     private boolean paid;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private User user;
 
     public Billing() {
         super();
     }
 
-    public Billing(String title, double value, boolean paid) {
+    public Billing(String title, double value, boolean paid, User user) {
         this();
         this.title = title;
         this.value = value;
         this.paid = paid;
+        this.user = user;
     }
 
     public String getTitle() {

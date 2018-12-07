@@ -2,21 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c403ecf5-158e-4d5f-bf94-3c116e210886" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../API/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../API/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../API/Controllers/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/../API/Controllers/API.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manvidas/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manvidas/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/manvidas/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/manvidas/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/manvidas/billing/Billing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/manvidas/billing/Billing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/manvidas/controllers/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/manvidas/controllers/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/manvidas/core/DatabaseLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/manvidas/core/DatabaseLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/manvidas/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/manvidas/user/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/manvidas/user/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/manvidas/user/UserRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/manvidas/billing/Billing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manvidas/billing/Billing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manvidas/billing/BillingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manvidas/billing/BillingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/manvidas/controllers/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manvidas/controllers/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manvidas/controllers/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manvidas/controllers/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manvidas/core/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manvidas/core/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/manvidas/core/DatabaseLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manvidas/core/DatabaseLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/manvidas/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manvidas/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/manvidas/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manvidas/user/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -54,8 +57,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/user/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="479">
+              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/user/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,8 +93,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/billing/Billing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/core/DatabaseLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,10 +136,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/core/DatabaseLoader.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/controllers/AccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state relative-caret-position="425">
+              <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,22 +167,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/manvidas/core/BaseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/manvidas/Application.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/billing/BillingRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/controllers/DatabaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/user/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/billing/Billing.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/user/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/core/DatabaseLoader.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/manvidas/controllers/AccountController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/billing/BillingRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/user/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/user/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/controllers/DatabaseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/billing/Billing.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/manvidas/core/DatabaseLoader.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="444" />
-    <option name="y" value="-12" />
-    <option name="width" value="1213" />
-    <option name="height" value="675" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -226,7 +277,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544175034317" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544187339600" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RunDashboard">
@@ -278,7 +329,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -287,7 +338,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.30985916" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.28169015" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -349,41 +400,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/core/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/controllers/AccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -399,18 +419,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/user/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+        <state relative-caret-position="187">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/user/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/billing/Billing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -427,20 +447,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/billing/Billing.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="306">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/core/DatabaseLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/core/DatabaseLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/manvidas/controllers/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

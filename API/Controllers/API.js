@@ -17,6 +17,21 @@ module.exports = {
   },
   register: function(req,res)
   {
-    return res.send("Loaded register");
+    Request({
+      method:'POST',
+      url:"http://localhost:8080/rest/register",
+      json: true,
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: {
+				'username':'pineapple',
+				'password':'tikrinam'
+			}
+    }, function(error,response,body){
+      console.log("body:\n\n\n",body);
+    });
+    return res.send("done");
   }
 }

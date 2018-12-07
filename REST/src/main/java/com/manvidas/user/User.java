@@ -25,7 +25,7 @@ public class User extends BaseEntity {
 
     public User() {
         super();
-        billings = new ArrayList<>(); // TODO: Update to get array list from database (Maybe)
+        billings = new ArrayList<>();
     }
 
     public User(String username, String password) {
