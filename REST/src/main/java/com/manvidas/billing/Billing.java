@@ -3,9 +3,7 @@ package com.manvidas.billing;
 import com.manvidas.core.BaseEntity;
 import com.manvidas.user.User;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Billing extends BaseEntity {

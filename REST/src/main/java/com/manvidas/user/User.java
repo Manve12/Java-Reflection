@@ -5,10 +5,10 @@ import com.manvidas.billing.Billing;
 import com.manvidas.core.BaseEntity;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class User extends BaseEntity {
 
     public User() {
         super();
-        billings = new ArrayList<>(); // TODO: Update to get array list from database
+        billings = new ArrayList<>(); // TODO: Update to get array list from database (Maybe)
     }
 
     public User(String username, String password) {

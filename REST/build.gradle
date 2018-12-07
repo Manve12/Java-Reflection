@@ -27,7 +27,6 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-data-rest'
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     compile 'org.springframework.data:spring-data-rest-hal-browser'
-    compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
     //compile 'org.springframework.boot:spring-boot-starter-security'
     compile 'com.h2database:h2'
     testCompile group: 'junit', name: 'junit', version: '4.12'

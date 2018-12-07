@@ -14,5 +14,4 @@ public class DatabaseController {
 
     @Autowired
     private BillingRepository billingRepository;
-
 }
