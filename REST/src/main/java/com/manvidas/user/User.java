@@ -17,7 +17,7 @@ public class User extends BaseEntity {
     @NotNull
     private String username;
 
-    @JsonIgnore
+    @NotNull
     private String password;
 
     @OneToMany
