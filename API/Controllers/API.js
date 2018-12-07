@@ -31,7 +31,12 @@ module.exports = {
 				'password':req.body.password
 			}
     }, function(error,response,body){
-      console.log("body:\n\n\n",body);
+      if (response.statusCode != 409){
+        console.log("body:\n\n\n",body);
+        console.log(response.statusCode);
+      } else {
+        console.log(response.statusCode);
+      }
     });
     return res.send("done");
   }
