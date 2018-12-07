@@ -1,5 +1,6 @@
 //API JS CONTROLLER
 var Request = require("request");
+var bodyParser = require("body-parser");
 
 module.exports = {
   login: function(req,res)
@@ -26,8 +27,8 @@ module.exports = {
 				'Content-Type': 'application/json'
 			},
 			body: {
-				'username':'pineapple',
-				'password':'tikrinam'
+				'username':req.body.username,
+				'password':req.body.password
 			}
     }, function(error,response,body){
       console.log("body:\n\n\n",body);
