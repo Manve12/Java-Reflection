@@ -30,6 +30,12 @@ app.use("/login", function(req,res){
   }
 });
 
+app.use("/billing", function(req,res){
+  if (!(req.cookies.length > 0)){
+    res.sendFile(path.join(__dirname+'/Views/billing.html'));
+  }
+});
+
 app.use("/api", apiRoutes);
 app.use("/api/billing", billingRoutes);
 

@@ -22,7 +22,6 @@ public class AccountController {
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody(required = true) User user, HttpServletRequest request) // takes a json
     {
-        if (request.getSession().getAttribute("user") == null) {
             if (userRepository.findUserByUsername(user.getUsername()) != null) {
                 return new ResponseEntity<String>("Account with that username already exists", HttpStatus.CONFLICT);
             }
@@ -30,27 +29,23 @@ public class AccountController {
             userRepository.save(user);
 
             return new ResponseEntity<String>("Account has been created successfully", HttpStatus.CREATED);
-        }
-        return new ResponseEntity<String>("Already logged in", HttpStatus.ALREADY_REPORTED);
     }
 
     @PostMapping("/login") // returns 404 if account not found || returns () if username and password do not match  || returns 202 (accepted) if account exists
     public ResponseEntity<String> login(@RequestBody(required = true) User user, HttpServletRequest request) // takes a json
     {
-        if (request.getSession().getAttribute("user") == null) {
             if (userRepository.findUserByUsername(user.getUsername()) == null) {
                 return new ResponseEntity<String>("Account with that username does not exist", HttpStatus.UNPROCESSABLE_ENTITY);
             }
 
             if (userRepository.findUserByUsername(user.getUsername()) != null) {
                 if (userRepository.findUserByUsername(user.getUsername()).get(0).getPassword().toString().equals(user.getPassword().toString())) {
-                    request.getSession().setAttribute("user", user.getUsername());
+                    request.getSession().setAttribute("user", user);
                     return new ResponseEntity<String>(new Gson().toJson(request.getSession()), HttpStatus.OK);
                 }
             }
 
             return new ResponseEntity<String>("Username or password is incorrect", HttpStatus.UNPROCESSABLE_ENTITY);
-        }
-        return new ResponseEntity<String>("Already logged in", HttpStatus.ALREADY_REPORTED);
+
     }
 }

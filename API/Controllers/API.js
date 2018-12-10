@@ -29,7 +29,8 @@ module.exports = {
       var loginBody = {};
       if (response.statusCode == 200)
       {
-        loginBody = body.session.attributes;
+        loginBody = body.session.attributes.user;
+
       }
       callback(res,loginBody);
     });
@@ -40,7 +41,7 @@ module.exports = {
   logout: function(req,res)
   {
     res.clearCookie("body");
-    return res.send("done");
+    return res.redirect("/login");
   },
   register: function(req,res)
   {
