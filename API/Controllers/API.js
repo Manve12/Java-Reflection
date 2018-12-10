@@ -2,9 +2,17 @@
 var Request = require("request");
 var bodyParser = require("body-parser");
 
+
+function callback(res,body)
+{
+  res.cookie("body", body);
+  return res.send("done");
+}
+
 module.exports = {
   login: function(req,res)
   {
+    if (req.cookies.body == null){
     Request({
       method:'POST',
       url:"http://localhost:8080/rest/login",
@@ -18,9 +26,16 @@ module.exports = {
 				'password':req.body.password
 			}
     }, function(error,response,body){
-      //TODO:mb - Add status code validation
+      var loginBody = {};
+      if (response.statusCode == 200)
+      {
+        loginBody = body.session.attributes;
+      }
+      callback(res,loginBody);
     });
-    return res.send("done");
+  } else {
+    res.redirect("/");
+  }
   },
   logout: function(req,res)
   {
@@ -42,8 +57,14 @@ module.exports = {
 				'password':req.body.password
 			}
     }, function(error,response,body){
-      //TODO:mb - Add status code validation
+      ///FIXME: Fix the registrationBody 
+      var registrationBody = {};
+      if (response.statusCode == 200)
+      {
+        registrationBody = body.session.attributes;
+      }
+      callback(res,registrationBody);
     });
-    return res.send("done");
+
   }
 }

@@ -4,6 +4,9 @@ const path = require('path');
 const app = express();
 const port = 8081;
 
+var cookieParser = require("cookie-parser");
+app.use(cookieParser());
+
 const apiRoutes = require("./Router/API");
 const billingRoutes = require("./Router/Billing");
 app.use(function(req,res,next){
@@ -16,11 +19,15 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 
 app.use("/register", function(req,res){
-  res.sendFile(path.join(__dirname+'/Views/register.html'));
+  if (!(req.cookies.length > 0)){
+    res.sendFile(path.join(__dirname+'/Views/register.html'));
+  }
 });
 
 app.use("/login", function(req,res){
-  res.sendFile(path.join(__dirname+'/Views/login.html'));
+  if (!(req.cookies.length > 0)){
+    res.sendFile(path.join(__dirname+'/Views/login.html'));
+  }
 });
 
 app.use("/api", apiRoutes);
