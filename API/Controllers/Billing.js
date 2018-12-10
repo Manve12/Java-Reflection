@@ -12,20 +12,17 @@ module.exports = {
   {
     Request({
       method:'POST',
-      url:"http://localhost:8080/rest/billing/single",
+      url:"http://localhost:8080/rest/billing/all",
       json: true,
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: {
-        'username':req.body.username
-      }
+      body: {}
     }, function(error,response,body){
       //TODO:mb - Add status code validation
-      console.dir(body);
+      callback(res,body);
     });
-    return res.send("done");
   },
   all: function(req,res)
   {

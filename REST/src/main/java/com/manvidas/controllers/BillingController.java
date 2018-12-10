@@ -20,64 +20,40 @@ public class BillingController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/single")
-    public ResponseEntity<String> single(@RequestBody(required = true) User user, @PathVariable("title") String title, HttpServletRequest request)
+    @GetMapping("/single")
+    public ResponseEntity<String> single(@RequestBody(required = true) Billing billing, HttpServletRequest request)
     {
-        List<User> username = userRepository.findUserByUsername(user.getUsername());
-        if (username.get(0) == null){
-            return new ResponseEntity<>("No account found under the logged in username", HttpStatus.UNPROCESSABLE_ENTITY);
-        }else {
-            List<Billing> bills = username.get(0).getBillings();
-            Billing bill;
-
-            Map<String, String> tempMap = new HashMap<>();
-
-            bills.forEach(
-                    b -> {
-                        if (b.getTitle().equals(title)) {
-                            tempMap.put("title", b.getTitle());
-                            tempMap.put("value", "" + b.getValue());
-                            tempMap.put("paid", (b.isPaid() ? "Yes" : "No"));
-                        }
-                    }
-            );
-
-            if (tempMap.size() > 0) {
-                return new ResponseEntity<>(new Gson().toJson(tempMap), HttpStatus.OK);
-            }
-
-            return new ResponseEntity<>("Could not find a bill under that name", HttpStatus.NOT_FOUND);
-        }
-
+        String title = billing.getTitle();
+        return new ResponseEntity<>(new Gson().toJson(title), HttpStatus.OK);
     }
 
     @PostMapping("/all") //retrieves all bills for a specific user
     public ResponseEntity<String> all(@RequestBody(required = true) String _user, HttpServletRequest request) // takes a json
     {
+        System.out.println(_user);
         User user = new Gson().fromJson(_user, User.class);
-        User username = userRepository.findUserByUsername(user.getUsername()).get(0);
-        if (username == null){
-            return new ResponseEntity<>("No account found under the logged in username", HttpStatus.UNPROCESSABLE_ENTITY);
-        }else
-        {
-            List<Billing> bills = username.getBillings();
+        System.out.println(user.getUsername());
+            User username = userRepository.findUserByUsername(user.getUsername()).get(0);
+            if (username == null) {
+                return new ResponseEntity<>("No account found under the logged in username", HttpStatus.UNPROCESSABLE_ENTITY);
+            } else {
+                List<Billing> bills = username.getBillings();
 
-            Map<Long, Map<String, String>> arr = new HashMap<>();
+                Map<Long, Map<String, String>> arr = new HashMap<>();
 
-            long counter = 0L;
-            for (Billing billing : bills) {
-                Map<String, String> tempMap = new HashMap<>();
-                tempMap.put("title", billing.getTitle());
-                tempMap.put("value", ""+billing.getValue());
-                tempMap.put("paid", (billing.isPaid() ? "Yes" : "No"));
+                long counter = 0L;
+                for (Billing billing : bills) {
+                    Map<String, String> tempMap = new HashMap<>();
+                    tempMap.put("title", billing.getTitle());
+                    tempMap.put("value", "" + billing.getValue());
+                    tempMap.put("paid", (billing.isPaid() ? "Yes" : "No"));
 
-                arr.put(counter,tempMap);
-                counter ++;
+                    arr.put(counter, tempMap);
+                    counter++;
+                }
+
+                String json = new Gson().toJson(arr);
+                return new ResponseEntity<>(json, HttpStatus.OK);
             }
-
-            String json = new Gson().toJson(arr);
-            return new ResponseEntity<>(json, HttpStatus.OK);
-        }
-
     }
 }
