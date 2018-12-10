@@ -39,11 +39,12 @@ module.exports = {
   },
   logout: function(req,res)
   {
-    //TODO:mb - Add ability to logout
+    res.clearCookie("body");
     return res.send("done");
   },
   register: function(req,res)
   {
+    if (req.cookies.body == null){
     Request({
       method:'POST',
       url:"http://localhost:8080/rest/register",
@@ -57,7 +58,7 @@ module.exports = {
 				'password':req.body.password
 			}
     }, function(error,response,body){
-      ///FIXME: Fix the registrationBody 
+      ///FIXME: Fix the registrationBody
       var registrationBody = {};
       if (response.statusCode == 200)
       {
@@ -65,6 +66,10 @@ module.exports = {
       }
       callback(res,registrationBody);
     });
+  } else
+  {
+    res.redirect("/");
+  }
 
   }
 }
