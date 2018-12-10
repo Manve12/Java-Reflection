@@ -32,32 +32,15 @@ public class DatabaseLoader implements ApplicationRunner {
         users.save(user);
 
         Billing bill_1 = new Billing("Electricity", 124.23, false, user);
+        Billing bill_2 = new Billing("Gas", 687.64, true, user);
+
 
         billings.save(bill_1);
+        billings.save(bill_2);
 
         user.addBilling(bill_1);
+        user.addBilling(bill_2);
 
         users.save(user);
-
-        //retrieve user as a test of repos command
-
-        List<String> arr = new ArrayList<>();
-        arr.add("username");
-        arr.add("pineapple");
-
-        ///finding billings
-        for (String item : arr)
-        {
-            try {
-                if (users.findBillingsByUsername(item).get(0) != null) {
-                    System.out.printf("Found billings under username: %s%n",item);
-                } else {
-                    throw new Exception();
-                }
-            } catch (Exception ex)
-            {
-                System.out.printf("Exception due to %s%n", item);
-            }
-        }
     }
 }

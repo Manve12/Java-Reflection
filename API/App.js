@@ -17,6 +17,11 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.use("/register", function(req,res){
   res.sendFile(path.join(__dirname+'/Views/register.html'));
 });
+
+app.use("/login", function(req,res){
+  res.sendFile(path.join(__dirname+'/Views/login.html'));
+});
+
 app.use("/api", apiRoutes);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
