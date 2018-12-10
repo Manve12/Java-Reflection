@@ -5,6 +5,7 @@ const app = express();
 const port = 8081;
 
 const apiRoutes = require("./Router/API");
+const billingRoutes = require("./Router/Billing");
 app.use(function(req,res,next){
   next();
 });
@@ -23,5 +24,6 @@ app.use("/login", function(req,res){
 });
 
 app.use("/api", apiRoutes);
+app.use("/api/billing", billingRoutes);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
